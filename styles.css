@@ -32,7 +32,7 @@ nav ul {
 nav a {
     text-decoration: none;
     color: #4c7ca8;
-    font-family: "Original Surfer", sans-serif;
+    font-family: "Merienda", cursive;
     font-size: 1.3rem;
     transition: color 0.3s;
 }
@@ -43,7 +43,7 @@ nav a:hover {
 
 /* Hero section */
 .hero {
-    background-image: url('images/imagen1.webp');
+    background-image: url('images/imagen1.jpg');
     background-size: cover;
     background-position: center;
     height: 90vh;
@@ -51,11 +51,11 @@ nav a:hover {
     align-items: flex-start;
     justify-content: center;
     position: relative;
-    padding-top: 80px;
+    padding-top: 40px;  /* Reducir espacio en la parte superior */
 }
 
 .overlay {
-    padding: 30px;
+    padding: 20px;  /* Reducir el padding */
     border-radius: 20px;
     text-align: center;
 }
@@ -63,18 +63,18 @@ nav a:hover {
 /* Títulos con nueva fuente */
 .overlay h1,
 .overlay h3 {
-    font-family: 'Dancing Script', cursive;
+    font-family: "Merienda", cursive;
     color: whitesmoke;
     margin: 10px 0;
     text-shadow: none;
 }
 
 .overlay h1 {
-    font-size: 4em;
+    font-size: 3.5em;  /* Reducir tamaño */
 }
 
 .overlay h3 {
-    font-size: 2em;
+    font-size: 1.8em;  /* Reducir tamaño */
 }
 
 /* Agradecimientos */
@@ -82,13 +82,13 @@ nav a:hover {
     background-image: url('images/agradecimiento-bg.jpg');
     background-size: cover;
     background-position: center;
-    padding: 80px 0;
+    padding: 50px 0;  /* Reducir espacio arriba y abajo */
     text-align: center;
     color: whitesmoke;
 }
 
 #agradecimiento .content {
-    padding: 40px;
+    padding: 30px;  /* Reducir padding */
     border-radius: 20px;
     max-width: 800px;
     margin: 0 auto;
@@ -106,39 +106,39 @@ img {
 
 /* Card de agradecimiento unificada */
 .card-agradecimiento {
-    padding: 40px;
+    padding: 30px;  /* Reducir padding */
     border-radius: 20px;
     max-width: 800px;
     margin: 0px auto;
     color: whitesmoke;
-    margin-bottom: 20px;  /* Reducir el margen inferior para pantallas pequeñas */
+    margin-bottom: 10px;  /* Reducir el margen inferior para pantallas pequeñas */
 }
 
 .card-agradecimiento h3,
 .card-agradecimiento h4,
 .card-agradecimiento p {
-    font-family: "Original Surfer", sans-serif;
-    font-size: 3em;
+    font-family: "Merienda", cursive;
+    font-size: 2.8em;  /* Reducir tamaño de la fuente */
     color: #4c7ca8;
-    margin-bottom: 20px;
+    margin-bottom: 15px;  /* Reducir espacio entre los elementos */
 }
 
 .card-agradecimiento h3 {
-    font-size: 3.5em;
-    margin-bottom: 20px;
-    font-style: italic;  /* Cursiva */
+    font-size: 3.2em;  /* Reducir tamaño de h3 */
+    margin-bottom: 15px;
+    font-family: "Merienda", cursive;
 }
 
 .card-agradecimiento h4 {
-    font-size: 1.2em; /* Establecer el mismo tamaño de fuente que los párrafos */
-    margin-top: 40px; /* Espacio entre el h4 y los párrafos */
-    margin-bottom: 20px; /* Reducir espacio después de h4 */
-    font-style: italic;  /* Cursiva */
+    font-size: 1.1em; /* Reducir tamaño */
+    margin-top: 30px; /* Espacio entre el h4 y los párrafos */
+    margin-bottom: 15px; /* Reducir espacio después de h4 */
+    font-family: "Merienda", cursive;
 }
 
 .card-agradecimiento p {
-    font-size: 1.2em;
-    margin-bottom: 20px; /* Aumentar espacio entre párrafos */
+    font-size: 1.1em;  /* Reducir el tamaño de los párrafos */
+    margin-bottom: 15px;  /* Reducir espacio entre párrafos */
 }
 
 /* Asegura que las imágenes y secciones estén centradas y sean responsivas */
@@ -148,99 +148,115 @@ section,
     text-align: center;
 }
 
-/* Hacer el diseño responsivo */
-@media (max-width: 768px) {
-    .overlay h1 {
-        font-size: 2.5em;
+/* Estilo para la animación */
+@keyframes slide-right-to-left {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
     }
-
-    .overlay h3 {
-        font-size: 1.5em;
-    }
-
-    .card-agradecimiento {
-        padding: 20px;
-    }
-
-    .card-agradecimiento h3 {
-        font-size: 2.5em;
-    }
-
-    .card-agradecimiento p {
-        font-size: 1em;
-    }
-
-    .content {
-        padding: 20px;
-    }
-
-    /* Ajuste de imagen para pantallas más pequeñas */
-    img {
-        width: 80%;  /* Aumentar el ancho para pantallas pequeñas */
-        max-width: 100%;
+    100% {
+        transform: translateX(0);
+        opacity: 1;
     }
 }
 
+.animate-right-to-left {
+    animation: slide-right-to-left 1s ease forwards;
+}
+
+/* Estilo básico para el h3 */
+#agradecimiento-1 h3 {
+    font-family: "Merienda", cursive;
+    font-size: 2.8em;
+    color: #4c7ca8;
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+/* Ajustar márgenes generales */
+section {
+    margin: 0; /* Eliminar márgenes generales entre secciones */
+}
+
+
 /* Sección de Iglesia */
 #iglesia {
-    margin-top: 10px;  /* Reducir el margen superior */
-    background-color: white;  /* Fondo suave */
+    margin-top: 0px;  /* Reducir el margen superior de la iglesia */
+    background-color: white;
     padding: 60px 0;
     text-align: center;
-    margin-bottom: 40px;  /* Espacio después de la sección */
+    margin-bottom: 40px;  /* Si necesitas más espacio después de la iglesia, ajusta este valor */
 }
 
 #iglesia .content {
     max-width: 900px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;  /* Reducir padding */
 }
 
 #iglesia img {
-    width: 60%;  /* Tamaño de la imagen */
-    max-width: 600px;  /* Limitar tamaño máximo */
+    width: 60%;
+    max-width: 600px;
     height: auto;
     display: block;
-    margin: 20px auto;
+    margin: 15px auto;  /* Reducir el margen inferior */
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Sombra suave */
 }
 
-/* Estilo para el botón de Google Maps */
 .btn-maps {
     background-color: #4c7ca8;
     color: white;
-    padding: 10px 20px;
-    font-size: 1.2rem;
+    padding: 8px 16px;  /* Reducir el padding */
+    font-size: 1.1rem;  /* Reducir tamaño de fuente */
     border: none;
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
     transition: background-color 0.3s ease;
-    text-decoration: none;  /* Eliminar subrayado */
+    text-decoration: none;
 }
 
 .btn-maps:hover {
-    background-color: #d63384;  /* Color al pasar el ratón */
+    background-color: #d63384;
 }
 
 #iglesia h3 {
-    font-family: "Original Surfer", sans-serif;
-    font-size: 3em;
+    font-family: "Merienda", cursive;
+    font-size: 2.8em;
     color: #4c7ca8;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateX(100%);
 }
 
 #iglesia p {
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: #4c7ca8;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     line-height: 1.6;
+}
+
+
+/* Imagen centrada */
+#imagen-centrada {
+    margin-bottom: 5px; /* Reducir el margen inferior de la imagen */
+    padding: 0;  /* Eliminar cualquier padding innecesario */
+}
+
+#imagen-centrada img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible dentro de la sección */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 400px; /* Limitar la altura máxima de la imagen para evitar que ocupe mucho espacio */
+    display: block;
+    margin: 0 auto; /* Centra la imagen */
 }
 
 /* Responsividad */
 @media (max-width: 768px) {
-    #iglesia img {
+    /* Ajustar tamaños de imagen y texto */
+    img {
         width: 80%;
         max-width: 100%;
     }
@@ -248,9 +264,20 @@ section,
     #iglesia p {
         font-size: 1em;
     }
-}
 
-/* Imagen centrada */
-#imagen-centrada {
-    margin-bottom: 10px;  /* Reducir el margen inferior de la imagen */
+    .card-agradecimiento h3 {
+        font-size: 2.2em;
+    }
+
+    .card-agradecimiento p {
+        font-size: 1em;
+    }
+
+    .overlay h1 {
+        font-size: 2.5em;
+    }
+
+    .overlay h3 {
+        font-size: 1.5em;
+    }
 }
